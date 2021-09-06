@@ -1,0 +1,36 @@
+html {
+	background: #1C1C1C;
+}
+
+div {
+	display: flex;
+	justify-content: center;
+}
+
+input, textarea {
+	background: #1C1C1C;
+	height: 50px;
+	width: 1000px;
+	color: white;
+	font-size: 15px;
+	border: 2px solid gray;
+}
+button {
+	background: #1C1C1C;
+	border: #3F3F3F;
+	border: 2px solid gray;
+	color: white;
+
+}
+.img-omori {
+	width: 10%;
+	margin-top: 20px;
+}
+.msg, .avisos {
+	padding: 10px 10px;
+	margin-top: 10px;
+	background: #C0C0C0;
+	border: 2px solid #4F4F4F;
+	word-break: break-all;
+	font-family: 'Fira Code', monospace;
+}
