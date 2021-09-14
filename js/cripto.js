@@ -1,14 +1,25 @@
-	// Obtem elementos do HTML
+	// ========================================
+    //
+    // CriptoKai created by Kainan Henrique
+    // Copyright © 2021 Na18k
+    //
+    //  Creator - Na18k(GitHub): https://github.com/Na18k
+    //  Project page: https://github.com/Na18k/CriptoKai
+    //
+    // ========================================
+
+    // Obtem elementos do HTML
 	let mensagem = document.querySelector('.mensagem');
 	// var input = document.querySelector("input");
     var input = document.getElementById("input");
-    var button = document.querySelector("button");
+    var button = document.getElementById("cripto");
+    var buttonDescripto = document.getElementById("descripto");
 
-    // Valor do input inicial (Não mudar)
+    // Valor do input inicial (Não mexer!)
     var valor = "";
 
-    // Presets de caracteres (Alterável)
-    // var caracter = 62;
+// Presets de caracteres (Alterável)
+    var caracter = 10;
 
     // Letras
         var A = "1554614813";
@@ -78,31 +89,32 @@
         var num9 = "2581902569";
 
     // Especiais
-        var space = "1903890422"
+        var space = "1903890422";
+        var quebraDeLinha = "1234567890";
 
         var AAcento = "3722092239"; // Á
         var aAcento = "3098508202"; // á
         var AGrave = "3697618732"; // À
         var aGrave = "3373257631"; // à
-        var ATil = "3967936648" // Ã
-        var aTil = "3010513981" // Ã
-        var ACircunflexo = "3958913327" // Â
-        var aCiircunflexo = "3126428227" // â
-        var ATrema = "3155078881" // Ä
-        var aTrema = "3301960622" // Ä
+        var ATil = "3967936648"; // Ã
+        var aTil = "3010513981"; // Ã
+        var ACircunflexo = "3958913327"; // Â
+        var aCircunflexo = "3126428227"; // â
+        var ATrema = "3155078881"; // Ä
+        var aTrema = "3301960622"; // Ä
         var aa = "3711144789"; // ɐ̃
 
-        var CCedilha = "Ç";
-        var cCedilha = "ç"; 
+        var CCedilha = "3323692580"; // Ç
+        var cCedilha = "3634821967"; // ç
 
         var EAcento = "3610061813"; // É
         var eAcento = "3801018227"; // é
         var EGrave = "3801018227"; // È
         var eGrave = "3669451025"; // è
-        var ECircunflexo = "3620431474" // Ê
-        var eCircunflexo = "3775197024" // ê
-        var ETrema = "3562820051" // Ë
-        var eTrema = "3894354904" // ë
+        var ECircunflexo = "3620431474"; // Ê
+        var eCircunflexo = "3775197024"; // ê
+        var ETrema = "3562820051"; // Ë
+        var eTrema = "3894354904"; // ë
 
         var IAcento = "3980964490"; // Í
         var iAcento = "3030208837"; // í
@@ -136,53 +148,60 @@
         var NTil = "3228105429"; // Ñ
         var nTil = "3494827683"; // ñ
 
+        var YAcento = "3976721365"; // Ý
+        var yAcento = "3976721365"; // ý
+
 
         var trema = "3693973298"; // ¨
 
     // Caracteres especiais:
 
-        var Acento = "´"; // ´
-        var acento = "`"; // `
-        var circunflexo = "^"; // ^
-        var til = "~"; // ~
+        var acento = "3634821967"; // ´
+        var grave = "4293467847"; // `
+        var circunflexo = "4416142048"; // ^
+        var til = "4914341664"; // ~
 
-        var menos = "-"; // -
-        var mais = "+"; // +
-        var asterisco = "*"; // *
-        var barra = "/"; // /
-        // var barraEsquerda = "\"; // Não é possível adicionar no momento
-        var virgula = ","; // ,
-        var exclamação = "!"; // !
-        var interogacao = "?"; // ?
-        var grau = "°"; // °
-        var arroba = "@"; // @
-        var cerquilha = "#"; // #
-        var cifrao = "$"; // $
-        var porcento = "%"; // %
-        var ampersand = "&"; // &
-        var apostrofo = "'"; // '
-        var aspas = `"`; // " 
-        var pont1 = "¹"; // ¹
-        var pont2 = "²"; // ²
-        var pont3 = "³"; // ³
+        var menos = "4962134179"; // -
+        var mais = "4861300916"; // +
+        var igual = "4347162777" // =
+        var asterisco = "4828225651"; // *
+        var barra = "4248626792"; // /
+        var barraInvertida = "4534322308"; // \
+        var virgula = "4251966949"; // ,
+        var exclamacao = "4008435343"; // !
+        var interrogacao = "4586008648"; // ?
+        var grau = "4805474324"; // °
+        var arroba = "4483165161"; // @
+        var cerquilha = "4686220181"; // #
+        var cifrao = "4568497809"; // $
+        var porcentagem = "4501985519"; // %
+        var ampersand = "4138161563"; // &
+        var apostrofo = "4194264837"; // '
+        var aspas = `4835917089`; // " 
+        var pont1 = "4748643441"; // ¹
+        var pont2 = "4478046663"; // ²
+        var pont3 = "4987168816"; // ³
 
-        var libra = "£"; // £
-        var centavo = "¢"; // ¢
-        // var ¬ = "¬"; // ¬
-        var parentesesEsquerdo = "("; // (
-        var parentesesDireito = ")"; // )
-        var chaveEsquerdo = "{"; // {
-        var chaveDireiro = "}"; // }
-        var colcheteEsquerdo = "["; // [
-        var colcheteDireiro = "]"; // ]
-        var paragrafo = "§"; // §
-        var pontoEVirgula = ";"; // ;
-
-
-
+        var libra = "4334684113"; // £
+        var centavo = "4435640189"; // ¢
+        // var ¬ = "¬"; // ¬ Esse caractere se apresenta como invalido
+        var parentesesEsquerdo = "4972368212"; // (
+        var parentesesDireito = "4982006362"; // )
+        var chaveEsquerdo = "4080946098"; // {
+        var chaveDireiro = "4021553029"; // }
+        var colcheteEsquerdo = "4756787636"; // [
+        var colcheteDireiro = "4512037906"; // ]
+        var paragrafo = "4735656261"; // §
+        var pontoEVirgula = "4377022311"; // ;
 
     // Fim das presets
 
+// ============== Começo do Cripto ==============
+    function criptoFunc(caracterPrimario, caracterSecundario, cont) {
+        if(valor.substring(cont, cont + 1) == caracterPrimario) {
+            criptoFeito.push(caracterSecundario);
+        }
+    }
     function criptoFazer() {
 
         // Não mexer
@@ -192,290 +211,231 @@
          // vai repetir até as letras acabarem
 
             // A
-            if(valor.substring(cont, cont + 1) == "A") {
-                criptoFeito.push(A);
-            }
-            if(valor.substring(cont, cont + 1) == "a") {
-                criptoFeito.push(a);
-            }
+            criptoFunc("A", A, cont);
+            criptoFunc("a", a, cont);
+            criptoFunc("Á", AAcento, cont);
+            criptoFunc("á", aAcento, cont);
+            criptoFunc("À", AGrave, cont);
+            criptoFunc("à", aGrave, cont);
+            criptoFunc("Ã", ATil, cont);
+            criptoFunc("ã", aTil, cont);
+            criptoFunc("Â", ACircunflexo, cont);
+            criptoFunc("â", aCircunflexo, cont);
+            criptoFunc("Ä", ATrema, cont);
+            criptoFunc("ä", aTrema, cont);                
+                // ɐ̃
+                criptoFunc("ɐ̃", aa, cont);
 
             // B
-            if(valor.substring(cont, cont + 1) == "B") {
-                criptoFeito.push(B);
-            }
-            if(valor.substring(cont, cont + 1) == "b") {
-                criptoFeito.push(b);
-            }
+            criptoFunc("B", B, cont);
+            criptoFunc("b", b, cont);
 
             // C Ç
-            if(valor.substring(cont, cont + 1) == "C") {
-                criptoFeito.push(C);
-            }
-            if(valor.substring(cont, cont + 1) == "c") {
-                criptoFeito.push(c);
-            }
-            if(valor.substring(cont, cont + 1) == "Ç") {
-                criptoFeito.push(CCedilha);
-            }
-            if(valor.substring(cont, cont + 1) == "ç") {
-                criptoFeito.push(cCedilha);
-            }
+            criptoFunc("C", C, cont);
+            criptoFunc("c", c, cont);
+            criptoFunc("Ç", CCedilha, cont);
+            criptoFunc("ç", cCedilha, cont);
 
             // D 
-            if(valor.substring(cont, cont + 1) == "D") {
-                criptoFeito.push(D);
-            }
-            if(valor.substring(cont, cont + 1) == "d") {
-                criptoFeito.push(d);
-            }
+            criptoFunc("D", D, cont);
+            criptoFunc("d", d, cont);
 
             // E É È Ë Ê 
-            if(valor.substring(cont, cont + 1) == "E") {
-                criptoFeito.push(E);
-            }
-            if(valor.substring(cont, cont + 1) == "e") {
-                criptoFeito.push(e);
-            }
+            criptoFunc("E", E, cont);
+            criptoFunc("e", e, cont);
+            criptoFunc("É", EAcento, cont);
+            criptoFunc("é", eAcento, cont);
+            criptoFunc("È", EGrave, cont);
+            criptoFunc("è", eGrave, cont);
+            criptoFunc("Ê", ECircunflexo, cont);
+            criptoFunc("ê", eCircunflexo, cont);
+            criptoFunc("Ë", ETrema, cont);
+            criptoFunc("ë", eTrema, cont);
 
             // F 
-            if(valor.substring(cont, cont + 1) == "F") {
-                criptoFeito.push(F);
-            }
-            if(valor.substring(cont, cont + 1) == "f") {
-                criptoFeito.push(f);
-            }
+            criptoFunc("F", F, cont);
+            criptoFunc("f", f, cont);
 
             // G 
-            if(valor.substring(cont, cont + 1) == "G") {
-                criptoFeito.push(G);
-            }
-            if(valor.substring(cont, cont + 1) == "g") {
-                criptoFeito.push(g);
-            }
+            criptoFunc("G", G, cont);
+            criptoFunc("g", g, cont);
 
             // H
-            if(valor.substring(cont, cont + 1) == "H") {
-                criptoFeito.push(H);
-            }
-            if(valor.substring(cont, cont + 1) == "h") {
-                criptoFeito.push(h);
-            }
+            criptoFunc("H", H, cont);
+            criptoFunc("h", h, cont);
 
             // I Í Ì Ï Î 
-            if(valor.substring(cont, cont + 1) == "I") {
-                criptoFeito.push(I);
-            }
-            if(valor.substring(cont, cont + 1) == "i") {
-                criptoFeito.push(i);
-            }
+            criptoFunc("I", I, cont);
+            criptoFunc("i", i, cont);
+            criptoFunc("Í", IAcento, cont);
+            criptoFunc("í", iAcento, cont);
+            criptoFunc("Ì", IGrave, cont);
+            criptoFunc("ì", iGrave, cont);
+            criptoFunc("Ï", ITrema, cont);
+            criptoFunc("ï", iTrema, cont);
+            criptoFunc("Î", ICircunflexo, cont);
+            criptoFunc("î", iCircunflexo, cont);
 
             // J
-            if(valor.substring(cont, cont + 1) == "J") {
-                criptoFeito.push(J);
-            }
-            if(valor.substring(cont, cont + 1) == "j") {
-                criptoFeito.push(j);
-            }
+            criptoFunc("J", J, cont);
+            criptoFunc("j", j, cont);
 
             // K
-            if(valor.substring(cont, cont + 1) == "K") {
-                criptoFeito.push(K);
-            }
-            if(valor.substring(cont, cont + 1) == "k") {
-                criptoFeito.push(k);
-            }
+            criptoFunc("K", K, cont);
+            criptoFunc("k", k, cont);
 
             // L
-            if(valor.substring(cont, cont + 1) == "L") {
-                criptoFeito.push(L);
-            }
-            if(valor.substring(cont, cont + 1) == "l") {
-                criptoFeito.push(l);
-            }
+            criptoFunc("L", L, cont);
+            criptoFunc("l", l, cont);
 
             // M
-            if(valor.substring(cont, cont + 1) == "M") {
-                criptoFeito.push(M);
-            }
-            if(valor.substring(cont, cont + 1) == "m") {
-                criptoFeito.push(m);
-            }
+            criptoFunc("M", M, cont);
+            criptoFunc("m", m, cont);
 
             // N Ñ
-            if(valor.substring(cont, cont + 1) == "N") {
-                criptoFeito.push(N);
-            }
-            if(valor.substring(cont, cont + 1) == "n") {
-                criptoFeito.push(n);
-            }
-            if(valor.substring(cont, cont + 1) == "Ñ") {
-                criptoFeito.push(NTio);
-            }
-            if(valor.substring(cont, cont + 1) == "ñ") {
-                criptoFeito.push(nTio);
-            } 
+            criptoFunc("N", N, cont);
+            criptoFunc("n", n, cont);
+            criptoFunc("Ñ", NTil, cont);
+            criptoFunc("ñ", nTil, cont);
 
             // O Ö Ô Õ Ò Ó 
-            if(valor.substring(cont, cont + 1) == "O") {
-                criptoFeito.push(O);
-            }
-            if(valor.substring(cont, cont + 1) == "o") {
-                criptoFeito.push(o);
-            }
+            criptoFunc("O", O, cont);
+            criptoFunc("o", o, cont);
+            criptoFunc("Ó", OAcento, cont);
+            criptoFunc("ó", oAcento, cont);
+            criptoFunc("Ò", OGrave, cont);
+            criptoFunc("ò", oGrave, cont);
+            criptoFunc("Ô", OCircunflexo, cont);
+            criptoFunc("ô", oCircunflexo, cont);
+            criptoFunc("Õ", OTil, cont);
+            criptoFunc("õ", oTil, cont);
+            criptoFunc("Ö", OTrema, cont);
+            criptoFunc("ö", oTrema, cont);
 
             // P 
-            if(valor.substring(cont, cont + 1) == "P") {
-                criptoFeito.push(P);
-            }
-            if(valor.substring(cont, cont + 1) == "p") {
-                criptoFeito.push(p);
-            }
+            criptoFunc("P", P, cont);
+            criptoFunc("p", p, cont);
 
             // Q 
-            if(valor.substring(cont, cont + 1) == "Q") {
-                criptoFeito.push(Q);
-            }
-            if(valor.substring(cont, cont + 1) == "q") {
-                criptoFeito.push(q);
-            }
+            criptoFunc("Q", Q, cont);
+            criptoFunc("q", q, cont);
 
             // R 
-            if(valor.substring(cont, cont + 1) == "R") {
-                criptoFeito.push(R);
-            }
-            if(valor.substring(cont, cont + 1) == "r") {
-                criptoFeito.push(r);
-            }
+            criptoFunc("R", R, cont);
+            criptoFunc("r", r, cont);
 
             // S 
-            if(valor.substring(cont, cont + 1) == "S") {
-                criptoFeito.push(S);
-            }
-            if(valor.substring(cont, cont + 1) == "s") {
-                criptoFeito.push(s);
-            }
+            criptoFunc("S", S, cont);
+            criptoFunc("s", s, cont);
 
             // T 
-            if(valor.substring(cont, cont + 1) == "T") {
-                criptoFeito.push(T);
-            }
-            if(valor.substring(cont, cont + 1) == "t") {
-                criptoFeito.push(t);
-            }
+            criptoFunc("T", T, cont);
+            criptoFunc("t", t, cont);
 
-            // U Ü Ù Ú Û
-            if(valor.substring(cont, cont + 1) == "U") {
-                criptoFeito.push(U);
-            }
-            if(valor.substring(cont, cont + 1) == "u") {
-                criptoFeito.push(u);
-            }
+            // U Ü Ù Ú Û 
+            criptoFunc("U", U, cont);
+            criptoFunc("u", u, cont);
+            criptoFunc("Ú", UAcento, cont);
+            criptoFunc("ú", uAcento, cont);
+            criptoFunc("Ù", UGrave, cont);
+            criptoFunc("ù", uGrave, cont);
+            criptoFunc("Û", UCircunflexo, cont);
+            criptoFunc("û", uCircunflexo, cont);
 
             // V 
-            if(valor.substring(cont, cont + 1) == "V") {
-                criptoFeito.push(V);
-            }
-            if(valor.substring(cont, cont + 1) == "v") {
-                criptoFeito.push(v);
-            }
+            criptoFunc("V", V, cont);
+            criptoFunc("v", v, cont);
 
             // W 
-            if(valor.substring(cont, cont + 1) == "W") {
-                criptoFeito.push(W);
-            }
-            if(valor.substring(cont, cont + 1) == "w") {
-                criptoFeito.push(w);
-            }
+            criptoFunc("W", W, cont);
+            criptoFunc("w", w, cont);
 
             // X 
-            if(valor.substring(cont, cont + 1) == "X") {
-                criptoFeito.push(X);
-            }
-            if(valor.substring(cont, cont + 1) == "x") {
-                criptoFeito.push(x);
-            }
+            criptoFunc("X", X, cont);
+            criptoFunc("x", x, cont);
 
-            // Y Ý 
-            if(valor.substring(cont, cont + 1) == "Y") {
-                criptoFeito.push(Y);
-            }
-            if(valor.substring(cont, cont + 1) == "y") {
-                criptoFeito.push(y);
-            }
+            // Y Ý
+            criptoFunc("Y", Y, cont);
+            criptoFunc("y", y, cont);
+            criptoFunc("Ý", YAcento, cont);
+            criptoFunc("ý", yAcento, cont);
 
             // Z
-            if(valor.substring(cont, cont + 1) == "Z") {
-                criptoFeito.push(Z);
-            }
-            if(valor.substring(cont, cont + 1) == "z") {
-                criptoFeito.push(z);
-            }
+            criptoFunc("Z", Z, cont);
+            criptoFunc("z", z, cont);
 
             // =============
             // Números:
             // =============
 
             // 0
-            if(valor.substring(cont, cont + 1) == "0") {
-                criptoFeito.push(num0);
-            }
-
+            criptoFunc("0", num0, cont);
             // 1
-            if(valor.substring(cont, cont + 1) == "1") {
-                criptoFeito.push(num1);
-            }
-
+            criptoFunc("1", num1, cont);
             // 2
-            if(valor.substring(cont, cont + 1) == "2") {
-                criptoFeito.push(num2);
-            }
-
+            criptoFunc("2", num2, cont);
             // 3
-            if(valor.substring(cont, cont + 1) == "3") {
-                criptoFeito.push(num3);
-            }
-
+            criptoFunc("3", num3, cont);
             // 4
-            if(valor.substring(cont, cont + 1) == "4") {
-                criptoFeito.push(num4);
-            }
-
+            criptoFunc("4", num4, cont);
             // 5
-            if(valor.substring(cont, cont + 1) == "5") {
-                criptoFeito.push(num5);
-            }
-
+            criptoFunc("5", num5, cont);
             // 6
-            if(valor.substring(cont, cont + 1) == "6") {
-                criptoFeito.push(num6);
-            }
-
+            criptoFunc("6", num6, cont);
             // 7 
-            if(valor.substring(cont, cont + 1) == "7") {
-                criptoFeito.push(num7);
-            }
-
+            criptoFunc("7", num7, cont);
             // 8
-            if(valor.substring(cont, cont + 1) == "8") {
-                criptoFeito.push(num8);
-            }
-
+            criptoFunc("8", num8, cont);
             // 9
-            if(valor.substring(cont, cont + 1) == "9") {
-                criptoFeito.push(num9);
-            }
-
+            criptoFunc("9", num9, cont);
             // ==================
             // Especiais:
             // ==================
 
-            if(valor.substring(cont, cont + 1) == " ") {
-                criptoFeito.push(space);
-            }
+            criptoFunc(" ", space, cont);
 
+            criptoFunc("´", acento, cont);
+            criptoFunc("`", grave, cont);
+            criptoFunc("^", circunflexo, cont);
+            criptoFunc("~", til, cont);
 
+            criptoFunc("-", menos, cont);
+            criptoFunc("+", mais, cont);
+            criptoFunc("=", igual, cont);
+            criptoFunc("*", asterisco, cont);
+            criptoFunc("/", barra, cont);
+            criptoFunc("\\", barraInvertida, cont);
+            criptoFunc(",", virgula, cont);
+            criptoFunc("!", exclamacao, cont);
+            criptoFunc("?", interrogacao, cont);
+            criptoFunc("°", grau, cont);
+            criptoFunc("@", arroba, cont);
+            criptoFunc("#", cerquilha, cont);
+            criptoFunc("$", cifrao, cont);
+            criptoFunc("%", porcentagem, cont);
+            criptoFunc("&", ampersand, cont);
+            criptoFunc("'", apostrofo, cont);
+            criptoFunc("\u0022", aspas, cont);
+            criptoFunc("¹", pont1, cont);
+            criptoFunc("²", pont2, cont);
+            criptoFunc("$", pont3, cont);
 
+            criptoFunc("£", libra, cont);
+            criptoFunc("¢", centavo, cont);
+            // criptoFunc("¬", ¬, cont);
+            criptoFunc("(", parentesesEsquerdo, cont);
+            criptoFunc(")", parentesesDireito, cont);
 
+            criptoFunc("{", chaveEsquerdo, cont);
+            criptoFunc("}", chaveDireiro, cont);
+
+            criptoFunc("[", colcheteEsquerdo, cont);
+            criptoFunc("]", colcheteDireiro, cont);
+
+            criptoFunc("§", paragrafo, cont);
+            criptoFunc(";", pontoEVirgula, cont);
+
+            criptoFunc("\n", quebraDeLinha, cont);
 
             // console.log(cont + 1); // Não recomedavel usar, apenas para desenvolvedor!!
             logConsole[0] = cont;
@@ -483,6 +443,238 @@
         
     }
     var criptoFeito = [];
+
+// ============== Incio do DESCripto ==============
+
+    function descriptoFunc(caracterPrimario, caracterSecundario, cont) {
+        if(valor.slice(cont, cont + caracter) == caracterPrimario) {
+                descriptoFeito.push(caracterSecundario);
+        }
+    }
+
+    function descripto() {
+        // Não mexer
+        valor = input.value;
+
+        for(var cont = 0; cont < valor.length; cont = cont + caracter) {
+         // vai repetir até as letras acabarem
+
+            // A Á À Ã Â Ä 
+            descriptoFunc(A, "A", cont);
+            descriptoFunc(a, "a", cont);
+            descriptoFunc(AAcento, "Á", cont);
+            descriptoFunc(aAcento, "á", cont);
+            descriptoFunc(AGrave, "À", cont);
+            descriptoFunc(aGrave, "à", cont);
+            descriptoFunc(ATil, "Ã", cont);
+            descriptoFunc(aTil, "ã", cont);
+            descriptoFunc(ACircunflexo, "Â", cont);
+            descriptoFunc(aCircunflexo, "â", cont);
+            descriptoFunc(ATrema, "Ä", cont);
+            descriptoFunc(aTrema, "Ä", cont);
+                // ɐ̃
+                descriptoFunc(aa, "ɐ̃", cont);
+
+            // B
+            descriptoFunc(B, "B", cont);
+            descriptoFunc(b, "b", cont);
+            // C Ç
+            descriptoFunc(C, "C", cont);
+            descriptoFunc(c, "c", cont);
+            descriptoFunc(CCedilha, "Ç", cont);
+            descriptoFunc(cCedilha, "ç", cont);
+            // D
+            descriptoFunc(D, "D", cont);
+            descriptoFunc(d, "d", cont);
+            // E É È Ê Ë
+            descriptoFunc(E, "E", cont);
+            descriptoFunc(e, "e", cont);
+            descriptoFunc(EAcento, "É", cont);
+            descriptoFunc(eAcento, "é", cont);
+            descriptoFunc(EGrave, "È", cont);
+            descriptoFunc(eGrave, "è", cont);
+            descriptoFunc(ECircunflexo, "Ê", cont);
+            descriptoFunc(eCircunflexo, "ê", cont);
+            descriptoFunc(ETrema, "Ë", cont);
+            descriptoFunc(eTrema, "ë", cont);
+            // F
+            descriptoFunc(F, "F", cont);
+            descriptoFunc(f, "f", cont);
+            // G
+            descriptoFunc(G, "G", cont);
+            descriptoFunc(g, "g", cont);
+            // H
+            descriptoFunc(H, "H", cont);
+            descriptoFunc(h, "h", cont);
+            // I Í Ì Î Ï
+            descriptoFunc(I, "I", cont);
+            descriptoFunc(i, "i", cont);
+            descriptoFunc(IAcento, "Í", cont);
+            descriptoFunc(iAcento, "í", cont);
+            descriptoFunc(IGrave, "Ì", cont);
+            descriptoFunc(iGrave, "ì", cont);
+            descriptoFunc(ICircunflexo, "Î", cont);
+            descriptoFunc(iCircunflexo, "î", cont);
+            descriptoFunc(ITrema, "Ï", cont);
+            descriptoFunc(iTrema, "ï", cont);
+            // J
+            descriptoFunc(J, "J", cont);
+            descriptoFunc(j, "j", cont);
+            // K
+            descriptoFunc(K, "K", cont);
+            descriptoFunc(k, "k", cont);
+            // L
+            descriptoFunc(L, "L", cont);
+            descriptoFunc(l, "l", cont);
+            // M
+            descriptoFunc(M, "M", cont);
+            descriptoFunc(m, "m", cont);
+            // N
+            descriptoFunc(N, "N", cont);
+            descriptoFunc(n, "n", cont);
+            // O Ó Ò Ô Ô Ö
+            descriptoFunc(O, "O", cont);
+            descriptoFunc(o, "o", cont);
+            descriptoFunc(OAcento, "Ó", cont);
+            descriptoFunc(oAcento, "ó", cont);
+            descriptoFunc(OGrave, "Ò", cont);
+            descriptoFunc(oGrave, "ò", cont);
+            descriptoFunc(OTil, "Õ", cont);
+            descriptoFunc(oTil, "õ", cont);
+            descriptoFunc(OCircunflexo, "Ô", cont);
+            descriptoFunc(oCircunflexo, "ô", cont);
+            descriptoFunc(OTrema, "Ö", cont);
+            descriptoFunc(oTrema, "ö", cont);
+            // P
+            descriptoFunc(P, "P", cont);
+            descriptoFunc(p, "p", cont);
+            // Q
+            descriptoFunc(Q, "Q", cont);
+            descriptoFunc(q, "q", cont);
+            // R
+            descriptoFunc(R, "R", cont);
+            descriptoFunc(r, "r", cont);
+            // S
+            descriptoFunc(S, "S", cont);
+            descriptoFunc(s, "s", cont);
+            // T
+            descriptoFunc(T, "T", cont);
+            descriptoFunc(t, "t", cont);
+            // U Ú Ù Û Ü
+            descriptoFunc(U, "U", cont);
+            descriptoFunc(u, "u", cont);
+            descriptoFunc(UAcento, "Ú", cont);
+            descriptoFunc(uAcento, "ú", cont);
+            descriptoFunc(UGrave, "Ù", cont);
+            descriptoFunc(uGrave, "ù", cont);
+            descriptoFunc(UCircunflexo, "Û", cont);
+            descriptoFunc(uCircunflexo, "û", cont);
+            descriptoFunc(UTrema, "Ü", cont);
+            descriptoFunc(uTrema, "ü", cont);
+            // V
+            descriptoFunc(V, "V", cont);
+            descriptoFunc(v, "v", cont);
+            // W
+            descriptoFunc(W, "W", cont);
+            descriptoFunc(w, "w", cont);
+            // X
+            descriptoFunc(X, "X", cont);
+            descriptoFunc(x, "x", cont);
+            // Y Ý
+            descriptoFunc(Y, "Y", cont);
+            descriptoFunc(y, "y", cont);
+            descriptoFunc(YAcento, "Ý", cont);
+            descriptoFunc(yAcento, "ý", cont);
+            // Z
+            descriptoFunc(Z, "Z", cont);
+            descriptoFunc(z, "z", cont);
+
+            // =============
+            //
+            //  Números
+            //
+            // =============
+
+            // 1
+            descriptoFunc(num1, "1", cont);
+            // 2
+            descriptoFunc(num2, "2", cont);
+            // 3
+            descriptoFunc(num3, "3", cont);
+            // 4
+            descriptoFunc(num4, "4", cont);
+            // 5
+            descriptoFunc(num5, "5", cont);
+            // 6
+            descriptoFunc(num6, "6", cont);
+            // 7
+            descriptoFunc(num7, "7", cont);
+            // 8
+            descriptoFunc(num8, "8", cont);
+            // 9
+            descriptoFunc(num9, "9", cont);
+            // 0
+            descriptoFunc(num0, "0", cont);
+
+            // =============================
+            //
+            // Especiais
+            //
+            // =============================
+
+            descriptoFunc(space, " ", cont);
+
+            descriptoFunc(acento, "´",cont);
+            descriptoFunc(grave, "`",cont);
+            descriptoFunc(circunflexo, "^", cont);
+            descriptoFunc(til, "~",cont);
+
+            descriptoFunc(menos, "-", cont);
+            descriptoFunc(mais, "+", cont);
+            descriptoFunc(igual, "=",cont);
+            descriptoFunc(asterisco, "*",cont);
+            descriptoFunc(barra, "/",cont);
+            descriptoFunc(barraInvertida, "\\", cont);
+            descriptoFunc(virgula, ",",cont);
+            descriptoFunc(exclamacao, "!",cont);
+            descriptoFunc(interrogacao, "?",cont);
+            descriptoFunc(grau, "°",cont);
+            descriptoFunc(arroba, "@",cont);
+            descriptoFunc(cerquilha, "#",cont);
+            descriptoFunc(cifrao, "$", cont);
+            descriptoFunc(porcentagem, "%", cont);
+            descriptoFunc(ampersand, "&", cont);
+            descriptoFunc(apostrofo, "'",cont);
+            descriptoFunc(aspas, "\u0022",cont);
+            descriptoFunc(pont1, "¹",cont);
+            descriptoFunc(pont2, "²",cont);
+            descriptoFunc(pont3, "$",cont);
+
+            descriptoFunc(libra, "£", cont);
+            descriptoFunc(centavo, "¢", cont);
+            // descriptoFunc("¬", ¬, cont);
+            descriptoFunc(parentesesEsquerdo, "(", cont);
+            descriptoFunc(parentesesDireito, ")", cont);
+
+            descriptoFunc(chaveEsquerdo, "{", cont);
+            descriptoFunc(chaveDireiro, "}", cont);
+
+            descriptoFunc(colcheteEsquerdo, "[", cont);
+            descriptoFunc(colcheteDireiro, "]", cont);
+
+            descriptoFunc(paragrafo, "§", cont);
+            descriptoFunc(pontoEVirgula, ";", cont);
+
+            descriptoFunc(quebraDeLinha, "\n",cont);
+
+            
+            // console.log(cont + 1); // Não recomedavel usar, apenas para desenvolvedor!!
+        }
+
+    }
+    var descriptoFeito = [];
+
+// ============== Incio do Sistema ==============
 
     function print() {
 
@@ -495,25 +687,90 @@
         console.log("Imprimir: " + imprimir);
     }
 
+    function printDescripto() {
+
+        var imprimirDescripto = "";
+
+        for(var cont2 = 0; cont2 < descriptoFeito.length; cont2++) {
+            imprimirDescripto = imprimirDescripto + descriptoFeito[cont2];
+        }
+        mensagem.textContent = imprimirDescripto;
+        console.log("Imprimir Descripto: " + imprimirDescripto);
+    }
+
     function limpa() {
         console.clear(); // Limpa o console
         imprimir = "Carregando...";
+        imprimirDescripto = "Carregando...";
         criptoFeito = [];
+        descriptoFeito = [];
+        verificaVazio();
+    }
+    function verificaVazio() {
+        if(!input.value) {
+            console.log("O input está vazio");
+            mensagem.innerHTML = `
+                <h2>Atenção Erro!</h2>
+                <strong><p>Ops! Parece que algo ocoreu errado</p></strong>
+                <div class="erroMsgType">
+                    <p><strong>Tipo de erro:</strong><em>"Falta de entrada"</em>
+                    <br>
+                    <br>
+                    <br>
+                    <strong>Possiveis soluções:</strong>
+                    Por favor, insira algum valor no campo acima!</p>
+                </div>
+            `;
+        }
     }
     
-	function startCripto() {
-        limpa();
-        criptoFazer();
-        print();
-        console.log("Terminado...");
-        consoleDeveloper();
-	}
+    // Sistema de chamar a criptografia
+    	function startCripto() {
+            limpa();
+            criptoFazer();
+            print();
+            console.log("Terminado...");
+            verifica();
+            // consoleDeveloper();
+            easterEgg();
+    	}
 
-    // Inicia a Criptográfia
-	button.onclick = startCripto;
+        function startDescripto() {
+            verificaVazio();
+            limpa();
+            descripto();
+            printDescripto();
+            console.log("descripto");
+            verifica();
+            // consoleDeveloper();
+            easterEgg();
+        }
 
+        // Inicia a Criptográfia
+    	button.onclick = startCripto;
 
+        // resolve a Criptográfia
+        buttonDescripto.onclick = startDescripto;
 
+    function easterEgg() {
+        valor = input.value;
+
+        if(valor == "/12345") {
+            mensagem.textContent = "12345 é uma senha incorreta!";
+        }
+
+        if(valor == "/eggs") {
+            mensagem.innerHTML = `
+                <h2>Easter Eggs</h2>
+                <p>/12345 = 12345 é uma senha incorreta!</p>
+            `
+        }
+
+    }
+
+    function verifica() {
+        verificaVazio();
+    }
 
     // Recurso do Desenvolvedor (Desconsiderar)
         var logConsole = [
@@ -537,4 +794,5 @@
                 console.log("");
                 console.log("");
                 console.log("=======Console========");
+                verificaVazio();
         }

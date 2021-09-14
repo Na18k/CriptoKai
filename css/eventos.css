@@ -1,0 +1,31 @@
+.parabens {
+	background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, Violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, Violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, Violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, Violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1vw;
+}
+.independencia {
+	background: red;
+    background: -webkit-linear-gradient(left, yellow, green,blue);
+    background: -o-linear-gradient(right, yellow, green,blue);
+    background: -moz-linear-gradient(right, yellow, green,blue);
+    background: linear-gradient(to right, yellow, green,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1vw;
+}
+
+.natal {
+	background: red;
+    background: -webkit-linear-gradient(left, red, white);
+    background: -o-linear-gradient(right, red, white);
+    background: -moz-linear-gradient(right, red, white);
+    background: linear-gradient(to right, red, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1vw;
+}
