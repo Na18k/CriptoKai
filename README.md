@@ -1,2 +1,9 @@
 # CriptoKai
-Sistema de Criptografia
+<p>
+  Sistema de Criptografia
+</p>
+<p>
+  
+![logo](https://user-images.githubusercontent.com/75281033/134737878-1e8aa605-f3f9-421c-a8a2-d0fbbded9731.jpg)
+  
+</p>
