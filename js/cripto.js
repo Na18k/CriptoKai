@@ -109,7 +109,7 @@
 
         var EAcento = "3610061813"; // É
         var eAcento = "3801018227"; // é
-        var EGrave = "3801018227"; // È
+        var EGrave = "3775851971"; // È
         var eGrave = "3669451025"; // è
         var ECircunflexo = "3620431474"; // Ê
         var eCircunflexo = "3775197024"; // ê
@@ -156,7 +156,7 @@
 
     // Caracteres especiais:
 
-        var acento = "3634821967"; // ´
+        var acento = "4648375119"; // ´
         var grave = "4293467847"; // `
         var circunflexo = "4416142048"; // ^
         var til = "4914341664"; // ~
@@ -170,6 +170,8 @@
         var virgula = "4251966949"; // ,
         var exclamacao = "4008435343"; // !
         var interrogacao = "4586008648"; // ?
+        var ponto = "4044337533" // .
+        var doisPontos = "4686783022" // :
         var grau = "4805474324"; // °
         var arroba = "4483165161"; // @
         var cerquilha = "4686220181"; // #
@@ -435,6 +437,9 @@
             criptoFunc("§", paragrafo, cont);
             criptoFunc(";", pontoEVirgula, cont);
 
+            criptoFunc(".", ponto, cont);
+            criptoFunc(":", doisPontos, cont);
+
             criptoFunc("\n", quebraDeLinha, cont);
 
             // console.log(cont + 1); // Não recomedavel usar, apenas para desenvolvedor!!
@@ -664,6 +669,9 @@
 
             descriptoFunc(paragrafo, "§", cont);
             descriptoFunc(pontoEVirgula, ";", cont);
+
+            descriptoFunc(ponto, ".", cont);
+            descriptoFunc(doisPontos, ":", cont);
 
             descriptoFunc(quebraDeLinha, "\n",cont);
 
