@@ -1,4 +1,5 @@
 # CriptoKai
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=Na18k/CriptoKai&title=Visitantes)
 <p>
   Sistema de Criptografia
 </p>
